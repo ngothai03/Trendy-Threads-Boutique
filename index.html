@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fashion Store 203</title>
+    <script src="main.js" defer></script>
+             
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://th.bing.com/th/id/OIP.dumQTnqCxkC0pOybKDKjqAHaHp?w=872&h=900&rs=1&pid=ImgDetMain" alt="Logo" class="logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="  Search results for trending fashion..." class="search-input">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <a href="#" class="nav-item" onclick="showMessage('Login clicked')">Login</a>
+        <a href="#" class="nav-item" onclick="showMessage('Order clicked')">Order</a>
+        <a href="#" class="nav-item" onclick="showMessage('Shopping Cart clicked')">Shopping cart</a>
+    </div>
+    <script>
+        function showMessage(message) {
+            alert(message);
+        }
+    </script>
+        <div class="main">
+            <div class="sidebar">
+                <div class="sidebar-title">Filter fashion products</div>
+                <div class="sidebar-item" onclick="filterProducts('tatca')">
+                    <input type="checkbox" class="sidebar-checkbox">
+                    <label>ALL</label>
+                </div>
+                <div class="sidebar-item" onclick="filterProducts('SilkShirt')">
+                    <input type="checkbox" class="sidebar-checkbox">
+                    <label>Silk Shirt</label>
+                </div>
+                <div class="sidebar-item" onclick="filterProducts('Pants')">
+                    <input type="checkbox" class="sidebar-checkbox">
+                    <label>Pants</label>
+                </div>
+                <div class="sidebar-item" onclick="filterProducts('DRESS')">
+                    <input type="checkbox" class="sidebar-checkbox">
+                    <label>Dress</label>
+                </div>
+                <div class="sidebar-item" onclick="filterProducts('Shoes')">
+                    <input type="checkbox" class="sidebar-checkbox">
+                    <label>Shoes</label>
+                </div>
+                <div class="sidebar-item" onclick="filterProducts('Jacket')">
+                    <input type="checkbox" class="sidebar-checkbox">
+                    <label>Jacket</label>
+                </div>
+                <div class="sidebar-item" onclick="filterProducts('Sandals')">
+                    <input type="checkbox" class="sidebar-checkbox">
+                    <label>Sandals</label>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-title">Search results for trending fashion..."</div>
+                <div class="product-list">
+                    <!--ao so mi-->
+                    <div class="product-card SilkShirt" data-category="SilkShirt">
+                        <img src="https://www.dolcegabbana.com/dw/image/v2/BKDB_PRD/on/demandware.static/-/Sites-15/default/dw480a0e2e/images/zoom/F5O28THI1QN_S9000_3.jpg" alt="Product 5" class="product-image">
+                        <a href="#" class="product-name">OVERSIZE SILK SHIRT WITH FLORAL PRINT</a>
+                        <div class="product-price">899.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            (127 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('Silk Shirt')">Add to Cart</button>
+                    </div>
+                    <!--vay-->
+                    <div class="product-card DRESS" data-category="DRESS">
+                        <img src="https://www.versace.com/dw/image/v2/BGWN_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dwef0b5639/original/90_1014127-1A00572_1B000_14_Medusa95DrapedGown-Clothing-Versace-online-store_0_3.jpg?sw=1200&q=85&strip=true" alt="Product 6" class="product-image">
+                        <a href="#" class="product-name">DRESS: MEDUSA 95 DRAPED GOWN</a>
+                        <div class="product-price">990.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            (172 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('DRESS')">Add to Cart</button>
+                    </div>
+                     <!--ao so mi-->
+                    <div class="product-card SilkShirt" data-category="SilkShirt">
+                        <img src="https://www.dolcegabbana.com/dw/image/v2/BKDB_PRD/on/demandware.static/-/Sites-15/default/dw243801c9/images/zoom/F5R62TIS1SR_HN4YF_3.jpg" alt="Shirt 1" class="product-image">
+                        <a href="#" class="product-name">Chiffon shirt with nocturnal flower print</a>
+                        <div class="product-price">899.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            (203 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('Silk Shirt')">Add to Cart</button>
+                    </div>
+                     <!--ao so mi-->
+                    <div class="product-card SilkShirt" data-category="SilkShirt">
+                        <img src="https://www.dolcegabbana.com/dw/image/v2/BKDB_PRD/on/demandware.static/-/Sites-15/default/dwb3bf8f7a/images/zoom/F5R16TIS1MN_HY13M_3.jpg" alt="Shirt 2" class="product-image">
+                        <a href="#" class="product-name">Leopard-print chiffon shirt with ruches</a>
+                        <div class="product-price">899.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            (220 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('SilkShirt')">Add to Cart</button>
+                    </div>
+                     <!--ao so mi-->
+                    <div class="product-card SilkShirt" data-category="SilkShirt">
+                        <img src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1665506707/721176_ZAKH5_9000_002_100_0000_Light-Horsebit-jacquard-cotton-shirt.jpg" alt="Pants 1" class="product-image">
+                        <a href="#" class="product-name">HORSEBIT JACQUARD COTTON SHIRT</a>
+                        <div class="product-price">1.099.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            (183 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('SilkShirt')">Add to Cart</button>
+                    </div>
+                    <!--ao khoac-->
+                    <div class="product-card Jacket" data-category="Jacket">
+                        <img src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1700754452/694213_ZAHMD_1000_002_100_0000_Light-GG-cotton-viscose-formal-jacket.jpg" alt="Pants 2" class="product-image">
+                        <a href="#" class="product-name">GG COTTON VISCOSE FORMAL JACKET</a>
+                        <div class="product-price">3.299.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            (322 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('Jacket')">Add to Cart</button>
+                    </div>
+                    <!-- quan -->
+                    <div class="product-card Pants" data-category="Pants">
+                        <img src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1686328323/756517_ZAMC5_4258_002_100_0000_Light-GG-linen-cotton-jacquard-pant.jpg" alt="Shoes 1" class="product-image">
+                        <a href="#" class="product-name">GG LINEN COTTON JACQUARD PANT</a>
+                        <div class="product-price">899.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            (125 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('Pants')">Add to Cart</button>
+                    </div>
+                    <!--quan-->
+                    <div class="product-card Pants" data-category="Pants">
+                        <img src="https://www.dolcegabbana.com/dw/image/v2/BKDB_PRD/on/demandware.static/-/Sites-15/default/dwc2998e12/images/zoom/FXM04TJFMR5_M0208_1.jpg" alt="Shoes 2" class="product-image">
+                        <a href="#" class="product-name">Flared llama wool pants</a>
+                        <div class="product-price">1.450.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            (28 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('Pants')">Add to Cart</button>
+                    </div>
+                    <!--vay -->
+                    <div class="product-card DRESS" data-category="DRESS">
+                        <img src="https://www.versace.com/dw/image/v2/BGWN_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dw05e749bd/original/90_1011628-1A00572_1B000_14_Knotted~Backless~Long~Dress--Versace-online-store_1_0.jpg?sw=850&q=85&strip=true" alt="Accessory 1" class="product-image">
+                        <a href="#" class="product-name">KNOTTED BACKLESS LONG DRESS</a>
+                        <div class="product-price">1.990.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            (172 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('Dress')">Add to Cart</button>
+                    </div>
+                    <!--giay-->
+                    <div class="product-card Shoes" data-category="Shoes">
+                        <img src="https://www.versace.com/dw/image/v2/BGWN_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dw9d6c6b16/original/90_DSU8094-1A07985_6Y280_22_Trigreca~Trainers--Versace-online-store_0_0.jpg?sw=850&q=85&strip=true" alt="Accessory 2" class="product-image">
+                        <a href="#" class="product-name">TRIGRECA TRAINERS</a>
+                        <div class="product-price">2.099.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            (159 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('Shoes')">Add to Cart</button>
+                    </div>
+                    <!--giay-->
+                    <div class="product-card Shoes" data-category="Shoes">
+                        <img src="https://media.gucci.com/style/White_South_0_160_540x540/1683584150/670408_UPGA0_2348_002_100_0000_Light.jpg" alt="Product 5" class="product-image">
+                        <a href="#" class="product-name">WOMEN'S GG SNEAKER</a>
+                        <div class="product-price">2.300.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            (218 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('Shoes')">Add to Cart</button>
+                    </div>
+                    <!--guoc-->
+                    <div class="product-card Sandals" data-category="Sandals">
+                        <img src="https://www.dolcegabbana.com/on/demandware.static/-/Sites-15/default/dw13c1ae9b/images/zoom/CZ0290AD955_8L222_0.jpg?sw=328&sh=451" alt="Product 6" class="product-image">
+                        <a href="#" class="product-name">SATIN PLATFORMS WITH FUSIBLE RHINESTONES</a>
+                        <div class="product-price">12.699.000 đ</div>
+                        <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            (72 đánh giá)
+                        </div>
+                        <button class="buy-now" onclick="addToCart('Sandals')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-notification">
+        <p>Product has been added to the cart</p>
+    </div>
+    <div class="cart-container" id="cartContainer">
+        <h2>My Cart</h2>
+        <div id="cartItems"></div>
+        <button onclick="closeCart()">Close</button>
+   
+</body>
+
+</html>
